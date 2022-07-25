@@ -12,7 +12,7 @@ int Proxy::generate(std::string animal)
 	if (find(badStr.begin(), badStr.end(), animal) != badStr.end())
 	{
 		std::cout << "非法动物名" << std::endl;
-		return -1;
+		return 0;
 	}
 	else
 	{
@@ -39,6 +39,7 @@ int Proxy::generate(std::string animal)
 			{
 				cache[animal] = temp;
 			}
+			return temp;
 		}
 	}
 }
